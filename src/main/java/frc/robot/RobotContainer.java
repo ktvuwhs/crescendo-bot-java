@@ -16,13 +16,10 @@ public class RobotContainer {
 
   public RobotContainer() {
     configureBindings();
-
-    m_drivebase.setDefaultCommand(m_drivebase.offCommand());
   }
 
   private void configureBindings() {
     final CommandXboxController m_controller = new CommandXboxController(kControllerPort);
-    m_controller.a().whileTrue(m_drivebase.driveSpeedCommand(0.5));
   }
 
   public Command getAutonomousCommand() {
